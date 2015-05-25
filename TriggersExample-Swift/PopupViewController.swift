@@ -7,17 +7,35 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class PopupViewController :UIViewController {
+    
+    var moviePlayer : MPMoviePlayerController?
     
     @IBOutlet var closeBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playVideo()
     }
     
     @IBAction func closePopup(sender: AnyObject) {
         
+    }
+    
+    private func playVideo() {
+        if let
+            url = NSBundle.mainBundle().URLForResource("video", withExtension: "m4v"),
+            moviePlayer = MPMoviePlayerController(contentURL: url) {
+                self.moviePlayer = moviePlayer
+                moviePlayer.view.frame = self.view.bounds
+                moviePlayer.prepareToPlay()
+                moviePlayer.scalingMode = .AspectFill
+                self.view.addSubview(moviePlayer.view)
+        } else {
+            debugPrintln("Ops, something wrong when playing video.m4v")
+        }
     }
 }
 
