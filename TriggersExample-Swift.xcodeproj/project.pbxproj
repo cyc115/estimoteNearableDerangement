@@ -10,6 +10,7 @@
 		60F096BE1B13AC3800BBDF3F /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F096BD1B13AC3800BBDF3F /* PopupView.xib */; };
 		60F096C01B13AC5600BBDF3F /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F096BF1B13AC5600BBDF3F /* PopupViewController.swift */; };
 		60F096C31B13B73900BBDF3F /* video.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 60F096C21B13B55200BBDF3F /* video.m4v */; };
+		60F096C51B13B9D200BBDF3F /* ViewControllerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F096C41B13B9D200BBDF3F /* ViewControllerModule.swift */; };
 		9556D49D1A9F979100465B61 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9556D49C1A9F979100465B61 /* EstimoteSDK.framework */; };
 		AC72C5501A49AD9A00C72132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC72C54F1A49AD9A00C72132 /* AppDelegate.swift */; };
 		AC72C5521A49AD9A00C72132 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC72C5511A49AD9A00C72132 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		60F096BD1B13AC3800BBDF3F /* PopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
 		60F096BF1B13AC5600BBDF3F /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		60F096C21B13B55200BBDF3F /* video.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.m4v; sourceTree = "<group>"; };
+		60F096C41B13B9D200BBDF3F /* ViewControllerModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerModule.swift; sourceTree = "<group>"; };
 		9556D49C1A9F979100465B61 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 		AC72C54A1A49AD9A00C72132 /* TriggersExample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TriggersExample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC72C54E1A49AD9A00C72132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				AC72C54F1A49AD9A00C72132 /* AppDelegate.swift */,
 				AC72C5511A49AD9A00C72132 /* ViewController.swift */,
+				60F096C41B13B9D200BBDF3F /* ViewControllerModule.swift */,
 				AC72C58A1A49AFE800C72132 /* TriggersExample-Swift-Bridging-Header.h */,
 				AC72C5531A49AD9A00C72132 /* Main.storyboard */,
 				60F096BD1B13AC3800BBDF3F /* PopupView.xib */,
@@ -313,6 +316,7 @@
 			files = (
 				AC72C5521A49AD9A00C72132 /* ViewController.swift in Sources */,
 				AC72C5501A49AD9A00C72132 /* AppDelegate.swift in Sources */,
+				60F096C51B13B9D200BBDF3F /* ViewControllerModule.swift in Sources */,
 				60F096C01B13AC5600BBDF3F /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

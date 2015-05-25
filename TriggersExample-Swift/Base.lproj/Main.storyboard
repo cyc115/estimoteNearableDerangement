@@ -16,17 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIO-zs-o4B">
+                                <rect key="frame" x="0.0" y="0.0" width="773" height="1024"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ong-GT-fjR">
                                 <rect key="frame" x="104" y="898" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcT-uY-5xz">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcT-uY-5xz">
                                 <rect key="frame" x="349" y="936" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="NHC-qb-wec"/>
+                                </constraints>
                                 <state key="normal" title="Calibrate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onCalibrationClicked:" destination="yZA-nt-HjR" eventType="touchUpInside" id="pWo-WC-D8s"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa6-ZA-Pih">
                                 <rect key="frame" x="341" y="849" width="86" height="30"/>
@@ -37,16 +46,20 @@
                                     <action selector="onPopupBtnPressed:" destination="yZA-nt-HjR" eventType="touchUpInside" id="ihx-sZ-wMB"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIO-zs-o4B">
-                                <rect key="frame" x="0.0" y="0.0" width="773" height="1024"/>
-                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaD-IF-fD6">
+                                <rect key="frame" x="365" y="708" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="calibrateBtn" destination="gcT-uY-5xz" id="V5Z-oc-SIY"/>
+                        <outlet property="hiddenView" destination="vaD-IF-fD6" id="1QX-sL-uDn"/>
                         <outlet property="imageView" destination="gIO-zs-o4B" id="jux-gP-yot"/>
-                        <outlet property="infoLbl" destination="gIO-zs-o4B" id="2h9-Rj-SPR"/>
+                        <outlet property="infoLbl" destination="Ong-GT-fjR" id="8TB-dC-Jvd"/>
                         <outlet property="showPopBtn" destination="qa6-ZA-Pih" id="gcR-rR-a0V"/>
                     </connections>
                 </viewController>
