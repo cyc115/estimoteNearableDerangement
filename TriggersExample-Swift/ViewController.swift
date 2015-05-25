@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController, ESTNearableManagerDelegate {
     @IBOutlet var showPopBtn: UIButton!
-    
-    @IBOutlet var infoLbl: UILabel!
+    @IBOutlet var infoLbl: UIImageView!
     @IBOutlet var calibrateBtn: UIButton!
-    
+    @IBOutlet var imageView: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
