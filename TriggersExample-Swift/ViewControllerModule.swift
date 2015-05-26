@@ -18,7 +18,7 @@ class NearableHelper {
         var text = ""
         switch id {
         case "9b3cd4460c56565e":
-            text = "fridge"
+            text = "converse shoes"
         case "d59a7be8987f28a4" :
             text = "door"
         case "8b386da476667197" :
@@ -51,15 +51,28 @@ class NearableHelper {
         var saved = sqrt(Float(x*x + y*y + z*z) )
         var current = sqrt(Float(x1*x1 + y1*y1 + z1*z1))
         var diff = saved - current
-        
+        /*
         if (Int(abs(diff)) <= tolerance) {
             return false //has not moved
         }
         else {
             return true
         }
+        */
+        
+        return calcDiff1(x,y:y,z:z,x1:x1,y1:y1,z1:z1)
     }
     
+    class func calcDiff1(x: Int , y: Int , z : Int , x1 : Int , y1 : Int , z1: Int)-> Bool {
+        var res = abs(x1 - x) + abs(y1-y) + abs(z1-z)
+        let t = 100
+        if res <= t {
+            return false
+        }
+        else {
+            return true
+        }
+    }
     // return the nearable with id in the given nearable array
     // return nil if not found
     class func findNearableWithId(id:String, nearables : [ESTNearable]) -> ESTNearable! {

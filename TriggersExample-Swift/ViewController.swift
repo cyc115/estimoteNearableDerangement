@@ -27,8 +27,8 @@ class ViewController: UIViewController, ESTNearableManagerDelegate {
     let imgBag = UIImage(named: "sticker_bag")
     let imgDoor = UIImage(named: "sticker_door")
     let imgFridge = UIImage(named: "sticker_fridge")
-    let imgPTC = UIImage(named: "ptc")
-    
+    let imgPTC = UIImage(named: "demo_screen")
+    let imgConverse = UIImage(named: "converse")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +52,7 @@ class ViewController: UIViewController, ESTNearableManagerDelegate {
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 println("calibration complete")
+                self.calibrate()
             })
         })
         
@@ -92,8 +93,7 @@ class ViewController: UIViewController, ESTNearableManagerDelegate {
                             var text = ""
                             switch s {
                             case "9b3cd4460c56565e":
-                                imageView.image = imgFridge
-                                //showVideo()
+                                imageView.image = imgConverse
                             case "d59a7be8987f28a4" :
                                 imageView.image = imgDoor
                             case "8b386da476667197" :
