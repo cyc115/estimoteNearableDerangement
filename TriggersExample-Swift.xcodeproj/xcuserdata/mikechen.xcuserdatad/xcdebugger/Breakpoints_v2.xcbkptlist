@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TriggersExample-Swift/ViewController.swift"
-            timestampString = "454346430.095213"
+            timestampString = "454348753.734602"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "showVideo()"
             landmarkType = "5">
          </BreakpointContent>

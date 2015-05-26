@@ -65,7 +65,7 @@ class NearableHelper {
     
     class func calcDiff1(x: Int , y: Int , z : Int , x1 : Int , y1 : Int , z1: Int)-> Bool {
         var res = abs(x1 - x) + abs(y1-y) + abs(z1-z)
-        let t = 100
+        let t = 200
         if res <= t {
             return false
         }

@@ -30,6 +30,9 @@ class ViewController: UIViewController, ESTNearableManagerDelegate {
     let imgPTC = UIImage(named: "demo_screen")
     let imgConverse = UIImage(named: "converse")
     
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,6 +42,22 @@ class ViewController: UIViewController, ESTNearableManagerDelegate {
         nearableManager.startRangingForType(ESTNearableType.All)
         
         autoCalibrate()
+        
+        let singleTap = UITapGestureRecognizer(target: self, action: Selector("tapDetected"))
+        singleTap.numberOfTapsRequired = 1
+        
+        imageView.userInteractionEnabled = true
+        imageView.addGestureRecognizer(singleTap)
+    }
+    
+    
+    func tapDetected (){
+        if imageView.image == imgConverse {
+            showVideo()
+        }
+        else {
+            println("not converse")
+        }
     }
     
     func autoCalibrate() {
