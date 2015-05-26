@@ -22,6 +22,7 @@ class ViewController: UIViewController, ESTNearableManagerDelegate {
     private let nh = NearableHelper.self
     private var isCalibrated = false;
     
+    let STICKER_COUNT = 1;
     
     let imgBag = UIImage(named: "sticker_bag")
     let imgDoor = UIImage(named: "sticker_door")
@@ -37,15 +38,35 @@ class ViewController: UIViewController, ESTNearableManagerDelegate {
         nearableManager.delegate = self
         nearableManager.startRangingForType(ESTNearableType.All)
         
+        autoCalibrate()
     }
     
+    func autoCalibrate() {
+        
+        let qualityOfServiceClass = Int(QOS_CLASS_BACKGROUND.value)
+        let backgroundQueue = dispatch_get_global_queue(qualityOfServiceClass, 0)
+        dispatch_async(backgroundQueue, {
+            while !self.isCalibrated {
+                self.calibrate()
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                println("calibration complete")
+            })
+        })
+        
+
+    }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
     
     @IBAction func onPopupBtnPressed(sender: UIButton) {
-        
+        showVideo()
+    }
+    
+    func showVideo() {
         var popView = PopupViewController (nibName: "PopupView" , bundle : nil)
         
         var popController = UIPopoverController(contentViewController: popView)
@@ -72,6 +93,7 @@ class ViewController: UIViewController, ESTNearableManagerDelegate {
                             switch s {
                             case "9b3cd4460c56565e":
                                 imageView.image = imgFridge
+                                //showVideo()
                             case "d59a7be8987f28a4" :
                                 imageView.image = imgDoor
                             case "8b386da476667197" :
@@ -103,13 +125,18 @@ class ViewController: UIViewController, ESTNearableManagerDelegate {
             
     }
     @IBAction func onCalibrationClicked(sender: AnyObject) {
+        calibrate()
+    }
+    
+    func calibrate(){
         for n in nearables{
             savedStableState[n.identifier] = (n.xAcceleration, n.yAcceleration, n.zAcceleration)
         }
-        infoLbl.text = "calibrated with \(nearables.count) items"
+        infoLbl.text = "calibrating... \(nearables.count) items"
         
-        if (nearables.count > 0 ) {
+        if (nearables.count >= STICKER_COUNT ) {
             isCalibrated = true
+            infoLbl.text = "calibration complete with \(nearables.count) stickers"
         }
     }
 }

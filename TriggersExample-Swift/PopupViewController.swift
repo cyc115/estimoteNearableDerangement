@@ -21,7 +21,7 @@ class PopupViewController :UIViewController {
     }
     
     @IBAction func closePopup(sender: AnyObject) {
-        
+        self.dismissViewControllerAnimated(true, completion: {})
     }
     
     private func playVideo() {
