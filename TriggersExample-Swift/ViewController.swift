@@ -137,7 +137,9 @@ class ViewController: UIViewController, ESTNearableManagerDelegate {
             }
             
             if !anyMoved {
-                infoLbl.text = "nothing is moving"
+                //if let lbl = infoLbl {
+                //    lbl.text = "nothing is moving"
+                //}
                 imageView.image = imgPTC
                 
             }

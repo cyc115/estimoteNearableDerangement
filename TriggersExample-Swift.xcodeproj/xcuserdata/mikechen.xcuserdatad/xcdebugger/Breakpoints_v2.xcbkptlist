@@ -22,7 +22,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TriggersExample-Swift/PopupViewController.swift"
@@ -96,6 +96,22 @@
             startingLineNumber = "69"
             endingLineNumber = "69"
             landmarkName = "calcDiff1(_:y:z:x1:y1:z1:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TriggersExample-Swift/ViewController.swift"
+            timestampString = "454433628.648563"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "nearableManager(_:didRangeNearables:withType:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

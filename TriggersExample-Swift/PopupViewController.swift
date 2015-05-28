@@ -26,7 +26,7 @@ class PopupViewController :UIViewController {
     
     private func playVideo() {
         if let
-            url = NSBundle.mainBundle().URLForResource("video", withExtension: "m4v"),
+            url = NSBundle.mainBundle().URLForResource("video", withExtension: "mp4"),
             moviePlayer = MPMoviePlayerController(contentURL: url) {
                 self.moviePlayer = moviePlayer
                 moviePlayer.view.frame = self.view.bounds

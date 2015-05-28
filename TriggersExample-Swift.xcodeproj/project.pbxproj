@@ -262,6 +262,7 @@
 				TargetAttributes = {
 					AC72C5491A49AD9A00C72132 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 3KS9B887BK;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -448,6 +449,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../EstimoteSDK",
@@ -464,6 +468,7 @@
 					../../../EstimoteSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TriggersExample-Swift/TriggersExample-Swift-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -473,6 +478,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../EstimoteSDK",
@@ -489,6 +497,7 @@
 					../../../EstimoteSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TriggersExample-Swift/TriggersExample-Swift-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
